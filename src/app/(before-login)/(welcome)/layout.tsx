@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import Footer from "@/app/_component/footer";
-import Header from "@/app/_component/header";
+import Footer from "@/app/_components/footer";
+import Header from "@/app/_components/header";
 
 export default function WelcomeLayout({
     children

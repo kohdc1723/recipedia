@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 import BgPrimary from "@/../public/bg-primary.png";
 
@@ -30,13 +31,13 @@ export default function WelcomePage() {
                 <div className="flex items-center gap-3 text-base font-bold">
                     <Link
                         href="/search"
-                        className="bg-lime-700 w-fit px-4 lg:px-5 py-3 text-white text-sm lg:text-base rounded-lg font-bold hover:brightness-90"
+                        className={buttonVariants({ variant: "recipedia" })}
                     >
                         Search Recipes Now
                     </Link>
                     <Link
                         href="/register"
-                        className="bg-black w-fit px-4 lg:px-5 py-3 text-white text-sm lg:text-base rounded-lg font-bold hover:brightness-90"
+                        className={buttonVariants({ variant: "default" })}
                     >
                         Join Recipedia
                     </Link>
