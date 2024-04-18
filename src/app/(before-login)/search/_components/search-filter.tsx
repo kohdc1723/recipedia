@@ -1,8 +1,9 @@
 import { Separator } from "@/components/ui/separator";
 
 import MultiSelect from "./multi-select";
-import { cuisineTypeOptions, dietOptions, dishTypeOptions, healthOptions, mealTypeOptions } from "../_data/filter-options";
 import SingleSelect from "./single-select";
+import { cuisineTypeOptions, dietOptions, dishTypeOptions, healthOptions, mealTypeOptions } from "../_data/filter-options";
+import FilterParams from "../_types/filter-params";
 
 interface SearchFilterProps {
     searchParams: {

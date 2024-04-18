@@ -1,21 +1,16 @@
-"use client";
+import ResultList from "./result-list";
+import ResultSummary from "./result-summary";
+import FilterParams from "../_types/filter-params";
 
-import { useQuery } from "@tanstack/react-query";
-import RecipeDetail from "./recipe-detail";
-import RecipeList from "./recipe-list";
+interface SearchResultProps {
+    filterParams: FilterParams
+};
 
-export default function SearchResult() {
-    const {} = useQuery({
-        queryKey: ["search", {}, {}],
-        queryFn: async () => {
-            const { data } = await axios.get();
-        }
-    });
-
+export default function SearchResult({ filterParams }: SearchResultProps) {
     return (
-        <div className="px-0 lg:px-12 flex ">
-            <RecipeList />
-            <RecipeDetail />
+        <div className="flex-1 flex flex-col">
+            <ResultSummary />
+            <ResultList />
         </div>
     );
 };

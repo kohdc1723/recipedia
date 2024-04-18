@@ -1,28 +1,25 @@
 import SearchFilter from "./_components/search-filter";
 import SearchHeader from "./_components/search-header";
 import SearchResult from "./_components/search-result";
+import ResultDetail from "./_components/result-detail";
+import SearchParams from "./_types/search-params";
 
 interface SearchPageProps {
-    searchParams: {
-        q?: string | undefined;
-        diet?: string | undefined;
-        health?: string | undefined;
-        cuisine?: string[] | undefined;
-        meal?: string[] | undefined;
-        dish?: string[] | undefined;
-    };
+    searchParams: SearchParams;
 };
 
-export default function SearchPage({
-    searchParams
-}: SearchPageProps) {
-    const { q, diet, health, cuisine, meal, dish } = searchParams;
+export default function SearchPage({ searchParams }: SearchPageProps) {
+    const { currentId, ...filterParams } = searchParams;
 
     return (
         <div className="pt-16">
             <SearchHeader />
             <SearchFilter searchParams={searchParams} />
-            <SearchResult />
+
+            <div className="px-0 lg:px-12 flex">
+                <SearchResult filterParams={filterParams} />
+                <ResultDetail currentId={currentId} />
+            </div>
         </div>
     );
 };

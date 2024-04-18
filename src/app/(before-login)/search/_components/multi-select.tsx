@@ -60,7 +60,10 @@ export default function MultiSelect({
                         <Label
                             htmlFor={option.id}
                             key={option.id}
-                            className="flex items-center gap-2 p-2 text-sm font-normal bg-white hover:brightness-95"
+                            className={cn(
+                                "flex items-center gap-2 p-2 text-sm font-normal bg-white hover:cursor-pointer hover:brightness-95",
+                                (selectedOptions.includes(option.value) ? "bg-neutral-100" : "bg-white")
+                            )}
                         >
                             <Checkbox
                                 id={option.id}

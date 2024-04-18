@@ -39,7 +39,7 @@ export default function SingleSelect({
         <DropdownMenu>
             <DropdownMenuTrigger className={cn(
                 "flex h-10 w-48 items-center justify-between rounded-md border border-neutral-200 px-3 py-2 text-sm hover:brightness-95 focus:outline-none",
-                !selectedOptions.length ? "bg-white" : "bg-neutral-200"
+                !selectedOptions.length ? "bg-white" : "bg-neutral-100"
             )}>
                 {selectedOptions.length ? selectedOptions[0] : title}
                 <ChevronDown className="h-4 w-4" />
@@ -52,7 +52,7 @@ export default function SingleSelect({
                             onClick={() => handleOptionsChange(option.value)}
                             className={cn(
                                 "flex items-center gap-2 p-2 text-sm font-normal hover:brightness-95 hover:cursor-pointer",
-                                (selectedOptions[0] === option.value) ? "bg-neutral-200" : "bg-white"
+                                (selectedOptions[0] === option.value) ? "bg-neutral-100" : "bg-white"
                             )}
                         >
                             {option.label}
