@@ -1,5 +1,4 @@
-type SearchParams = {
-    currentId?: string | undefined;
+type RequestParams = {
     q?: string | undefined;
     diet?: string | undefined;
     health?: string | undefined;
@@ -8,4 +7,4 @@ type SearchParams = {
     dish?: string | undefined;
 };
 
-export default SearchParams;
+export default RequestParams;

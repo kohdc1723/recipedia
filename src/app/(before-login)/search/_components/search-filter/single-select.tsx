@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
-import { Option } from "../_data/filter-options";
+import { Option } from "../../_data/filter-options";
 import useSearchOptions from "@/app/hooks/use-search-options";
 
 interface SingleSelectProps {

@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { Option } from "../_data/filter-options";
+import { Option } from "../../_data/filter-options";
 import useSearchOptions from "@/app/hooks/use-search-options";
 import { useRouter } from "next/navigation";
 

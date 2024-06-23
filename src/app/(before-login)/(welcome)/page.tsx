@@ -49,6 +49,7 @@ export default function WelcomePage() {
                     alt="bg-primary"
                     height={400}
                     width={400}
+                    priority
                 />
             </div>
         </main>
